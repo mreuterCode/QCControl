@@ -109,9 +109,9 @@ public class QCControl extends Activity implements SensorEventListener {
         
         SensorManager.getRotationMatrix(rotationMatrix, null, mGravs, mGeoMags);
         SensorManager.getOrientation(rotationMatrix, orientation);
-        tv1.setText("azimuth: " + orientation[0] + "");
-        tv2.setText("pitch: " + orientation[1] + "");
-        tv3.setText("roll: " + orientation[2] + "");
+        tv1.setText("azimuth: " + orientation[0] + " ");
+        tv2.setText("pitch: " + orientation[1] + " ");
+        tv3.setText("roll: " + orientation[2] + " ");
     }
     
 }

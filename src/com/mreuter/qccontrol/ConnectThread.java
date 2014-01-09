@@ -15,8 +15,6 @@ public class ConnectThread extends Thread {
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
     public ConnectThread(BluetoothDevice device, QCControl Qcc) {
-        // Use a temporary object that is later assigned to mmSocket,
-        // because mmSocket is final
         BluetoothSocket tmp = null;
         mmDevice = device;
         this.qcc = Qcc;
@@ -54,7 +52,7 @@ public class ConnectThread extends Thread {
     public ConnectedThread getConnectedThread(){
     	return conTr;
     }
-    /** Will cancel an in-progress connection, and close the socket */
+    /** Will cancel an in-progress connection, and close the open socket */
     public void cancel() {
         try {
             mmSocket.close();
