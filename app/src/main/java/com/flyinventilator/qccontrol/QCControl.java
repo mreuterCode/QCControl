@@ -256,7 +256,7 @@ public class QCControl extends Activity implements SensorEventListener, OnSeekBa
 
 	@Override
 	public void onClick(View v) {
-		Log.e("QCCtrl", "STOP");
+		Log.e("QCCtrl", "STOP!");
 		switch (v.getId()){
 			case R.id.button :
 				Log.e("QCCtrl", "button1_STOP");
