@@ -37,16 +37,7 @@
 		android:layout_alignLeft="@+id/tv3"
 		android:layout_alignParentBottom="true"/>
 
-	<TextView android:id="@+id/tv4"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignBaseline="@+id/tv2"
-		android:layout_alignBottom="@+id/tv2"
-		android:layout_marginLeft="32dp"
-		android:layout_toRightOf="@+id/tv2"
-		android:text="read"/>
-
-    <Button
+	<Button
         android:text="STOP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,5 +64,81 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/connect_button" />
+
+	<Button
+		android:text="m_north"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/button_m_north"/>
+
+	<Button
+		android:text="m_west"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:id="@+id/button_m_west"/>
+
+	<Button
+		android:text="m_south"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/seekBar1"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/button_m_south"/>
+
+	<Button
+		android:text="m_east"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/button_m_east"
+		android:layout_alignBaseline="@+id/button_m_west"
+		android:layout_alignBottom="@+id/button_m_west"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"/>
+
+	<TextView
+		android:text="TextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/tv_control_mode"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/button_m_north"
+		android:layout_toEndOf="@+id/button_m_north"
+		android:layout_marginLeft="42dp"
+		android:layout_marginStart="42dp"/>
+
+	<Switch
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/switch_toggle_control"
+		android:layout_alignBaseline="@+id/tv4"
+		android:layout_alignBottom="@+id/tv4"
+		android:layout_alignLeft="@+id/tv_control_mode"
+		android:layout_alignStart="@+id/tv_control_mode"/>
+
+	<Button
+		android:text="Reset Calibration"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/reset_calibration"
+		android:textSize="8sp"
+		android:layout_below="@+id/switch_toggle_control"
+		android:layout_toRightOf="@+id/button_m_north"
+		android:layout_toEndOf="@+id/button_m_north"
+		android:layout_marginLeft="19dp"
+		android:layout_marginStart="19dp"/>
+
+	<TextView android:id="@+id/tv4"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:text="read"
+			  android:layout_below="@+id/tv3"
+			  android:layout_alignParentLeft="true"
+			  android:layout_alignParentStart="true"/>
+
 
 </RelativeLayout>

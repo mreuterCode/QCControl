@@ -12,6 +12,7 @@ import android.widget.SeekBar;
 
 public class ControlGraph extends ImageView {
 	Paint middleCircle = new Paint();
+	//Paint calibrationCross = new Paint();
 	Paint lines = new Paint();
 	Paint text = new Paint();
 	
@@ -20,6 +21,10 @@ public class ControlGraph extends ImageView {
 	
 	float pitch = 0.0f;
 	float roll = 0.0f;
+
+	/*float calibration_x = 0.0f;
+	float calibration_y = 0.0f;*/
+
 	boolean initialized = false;
 	
 	public ControlGraph(Context context) {
@@ -28,6 +33,10 @@ public class ControlGraph extends ImageView {
 		middleCircle.setColor(Color.GREEN);
 		middleCircle.setStyle(Paint.Style.STROKE);
 		middleCircle.setStrokeWidth(6);
+
+		/*calibrationCross.setColor(Color.RED);
+		calibrationCross.setStyle(Paint.Style.STROKE);
+		calibrationCross.setStrokeWidth(10);*/
 
 		lines.setColor(Color.BLUE);
 		lines.setStrokeWidth(4);
@@ -52,6 +61,7 @@ public class ControlGraph extends ImageView {
 
 
 		}
+		// Draw cursor circle
 		float x_center = getWidth()/2 - pitch*500;
 		float y_center = getHeight()/2 - roll*500;
 
@@ -62,6 +72,13 @@ public class ControlGraph extends ImageView {
 		
 		canvas.drawLine(x_center, y_center - 90, x_center, y_center - 50, middleCircle);
 		canvas.drawLine(x_center, y_center + 90, x_center, y_center + 50, middleCircle);
+
+		//Draw calibration cross
+		/*float calib_x_center = getWidth()/2 - calibration_x;
+		float calib_y_center = getHeight()/2 - calibration_y;
+
+		canvas.drawLine(calib_x_center - 20, calib_y_center, calib_x_center + 20, calib_y_center, calibrationCross);
+		canvas.drawLine(calib_x_center, calib_y_center - 20, calib_x_center, calib_y_center + 20, calibrationCross);*/
 
 	}
 

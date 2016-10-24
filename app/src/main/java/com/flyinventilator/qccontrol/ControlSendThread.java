@@ -42,7 +42,7 @@ public class ControlSendThread extends Thread {
 		int constant = (int) (qcc.getThrottle() * 1.25 + 125);
 		int[] instruction = new int[4];
 		
-		instruction[1] = constant - (int) (qcc.getSensorData()[1] * sensorAffinity);
+		instruction[1] = constant - (int) (qcc.getSensorData()[1] * sensorAffinity );
 		instruction[0] = constant - (int) (qcc.getSensorData()[2] * sensorAffinity);
 		instruction[3] = constant + (int) (qcc.getSensorData()[1] * sensorAffinity);
 		instruction[2] = constant + (int) (qcc.getSensorData()[2] * sensorAffinity);
